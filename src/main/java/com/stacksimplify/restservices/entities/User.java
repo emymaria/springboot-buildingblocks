@@ -11,8 +11,11 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
+
 @Entity
 @Table (name="user")
+@JsonFilter(value="userFilter")
 public class User {
 	
 	@Id
